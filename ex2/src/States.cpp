@@ -1,4 +1,4 @@
-#include "States.h"
+#include "States.hpp"
 #include <iostream>
 
 void Glad::action() const { std::cout << ":)" << std::endl; }

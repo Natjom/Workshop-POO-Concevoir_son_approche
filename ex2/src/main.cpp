@@ -1,5 +1,5 @@
-#include "Avatar.h"
-#include "States.h"
+#include "Avatar.hpp"
+#include "States.hpp"
 #include <iostream>
 
 void test_states() {

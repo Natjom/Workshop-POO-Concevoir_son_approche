@@ -1,7 +1,7 @@
 #ifndef STATES_H
 #define STATES_H
 
-#include "AvatarState.h"
+#include "AvatarState.hpp"
 
 class Glad : public AvatarState {
 public:

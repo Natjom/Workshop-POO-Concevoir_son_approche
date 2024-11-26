@@ -1,7 +1,7 @@
 #ifndef AVATAR_H
 #define AVATAR_H
 
-#include "AvatarState.h"
+#include "AvatarState.hpp"
 
 class Avatar {
 private:
