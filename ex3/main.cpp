@@ -1,10 +1,14 @@
 #include <iostream>
+#include <string> 
 #include "DynamicArray.hpp"
 
 using namespace std;
 
 typedef int ArrayElement;
 
+string array_element_to_string(ArrayElement *el) {
+  return to_string(*el);
+}
 
 int main() {
   DynamicArray arr;
