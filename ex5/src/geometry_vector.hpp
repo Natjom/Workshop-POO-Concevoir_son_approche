@@ -1,20 +1,22 @@
 #pragma once
 
-#include <math.h>
+#include <cmath>
 #include "coordinate.hpp"
 
-// To be completed.
+namespace Geometry {
+    class Vector {
+    public:
+        float x, y;
+        Vector(float x, float y) : x(x), y(y) {}
 
-class Vector {
-public:
-    float x, y;
-    Vector(float x, float y) : x(x), y(y) {}
-	
-	float getMagnitude() {
-		// To be completed.
-	}
-	
-	Coordinate getPosition() {
-		// To be completed.
-	}
-};
+        // Calcul de la magnitude du vecteur (√(x² + y²))
+        float getMagnitude() {
+            return std::sqrt(x * x + y * y);
+        }
+
+        // Retourne la position sous forme de coordonnées cartésiennes
+        Coordinate getPosition() {
+            return {x, y};
+        }
+    };
+}
