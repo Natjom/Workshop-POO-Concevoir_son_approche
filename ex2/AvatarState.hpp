@@ -5,7 +5,6 @@ class AvatarState {
 public:
     virtual ~AvatarState() = default;
     virtual void action() const = 0;
-    virtual AvatarState* next() const = 0;
 };
 
 #endif // AVATAR_STATE_H

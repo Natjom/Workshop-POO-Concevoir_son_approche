@@ -5,14 +5,16 @@
 
 class Avatar {
 private:
-    AvatarState* state; // Émotion courante
+    AvatarState* state; 
+    Avatar* next = nullptr;      
 
 public:
-    Avatar();
+    Avatar(AvatarState* initialState);
+    Avatar(AvatarState* initialState, Avatar* next);
     ~Avatar();
-
-    // Affiche l'émotion courante et passe à la suivante.
     void run();
+    void addState(AvatarState* newState);
+    void close();
 };
 
 #endif // AVATAR_H

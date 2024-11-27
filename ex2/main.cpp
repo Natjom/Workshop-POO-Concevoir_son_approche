@@ -3,21 +3,33 @@
 #include <iostream>
 
 void test_states() {
-    AvatarState* state = new Glad();
-    for (int i = 0; i < 10; ++i) {
-        state->action();
-        AvatarState* nextState = state->next();
-        delete state;
-        state = nextState;
-    }
-    delete state;
+    // AvatarState* state = new Glad();
+    // for (int i = 0; i < 10; ++i) {
+    //     state->action();
+    //     AvatarState* nextState = state->next();
+    //     delete state;
+    //     state = nextState;
+    // }
+    // delete state;
 }
 
 void test_avatar() {
-    Avatar avatar;
-    for (int i = 0; i < 10; ++i) {
-        avatar.run();
-    }
+    
+    AvatarState* s1 = new Glad();
+    AvatarState* s2 = new Happy	;
+    AvatarState* s3 = new Sad();
+    AvatarState* s4 = new Grumpy();
+    AvatarState* s5 = new Angry();
+
+    Avatar avatar(s1);
+    avatar.addState(s2);
+    avatar.addState(s3);
+    avatar.addState(s4);
+    avatar.addState(s5);
+    avatar.close();
+
+    avatar.run();
+
 }
 
 int main() {
